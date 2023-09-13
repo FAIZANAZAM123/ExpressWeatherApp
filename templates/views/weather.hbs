@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+<style>/* Global settings */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Input Section */
+.container-fluid.my-auto.ms-auto .inputtag {
+    background-color: #212529;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#datainput {
+    width: 80%;
+    border: none;
+    height: 40px;
+}
+
+#submitting {
+    width: 15%;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submitting:hover {
+    background-color: #128C7E;
+}
+
+/* Output Section */
+.container-fluid.helo {
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.start {
+    font-size: 1.2em;
+}
+
+.day, .date {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+#city-name {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #333;
+}
+
+#temperature {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ff4500;
+}
+
+hr {
+    margin: 20px 0;
+    border-top: 1px solid #e9ecef;
+}
+</style>
+</head>
+
+<body>
+    {{>navbar}}
+
+  <div class="container-fluid my-auto ms-auto">
+    <div class="inputtag">
+        <div class="row">
+            <div class="col-md-10 col-12 d-flex w-100 justify-content-center ">
+                <input id="datainput" placeholder="Enter city name" class="bg-dark text-light rounded-4" style="padding-left: 10px;" type="text">
+                <input id="submitting" class="rounded-3 bg-success text-light" placeholder="search" type="submit">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid helo">
+    <div class="start d-flex justify-content-between">
+        <div style="background-color: lightblue; color:#333" id="day" class="day">tuesday</div>
+        <div style="background-color: lightblue; color:#333" id="date" class="date">12/aug/2023</div>
+    </div>
+    <hr>
+    <div style="height:100px;background-color: lightblue; color:#333" class="" id="city-name"></div>
+    <div style=" height:100px; background-color: lightblue; color:#333" id="temperature"></div>
+</div>
+
+    {{>footer}}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
